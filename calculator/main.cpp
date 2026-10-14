@@ -8,7 +8,7 @@
 #include <string>
 #include <unordered_map>
 
-// инвертированные приоритеты операций
+// приоритеты операций
 std::unordered_map<char, short> priority_map{
     {'+', 1}, {'-', 1}, {'*', 2}, {'/', 2}, {'(', 0}};
 
