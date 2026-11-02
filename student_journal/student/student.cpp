@@ -40,9 +40,9 @@ int Student::get_min() {
     throw std::runtime_error("Students has no grades");
   }
 
-  std::vector<int>::iterator iter =
+  std::vector<int>::iterator it =
       std::min_element(grades_.begin(), grades_.end());
-  return *iter;
+  return *it;
 };
 
 int Student::id() const { return id_; }
