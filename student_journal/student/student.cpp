@@ -10,7 +10,7 @@ Student::Student(std::string name, std::vector<int> grades)
     : name(std::move(name)), grades_(std::move(grades)) {
   id_ = next_id;
   next_id++;
-};
+}
 
 float Student::get_average_grade() {
   float avg = 0;
@@ -18,12 +18,12 @@ float Student::get_average_grade() {
     avg += grades_[i];
   }
   return avg / grades_.size();
-};
+}
 
 int Student::get_bad_grades_count() {
   int matches = std::count(grades_.begin(), grades_.end(), 2);
   return matches;
-};
+}
 
 int Student::get_max() {
   if (grades_.size() == 0) {
@@ -33,7 +33,7 @@ int Student::get_max() {
   std::vector<int>::iterator iter =
       std::max_element(grades_.begin(), grades_.end());
   return *iter;
-};
+}
 
 int Student::get_min() {
   if (grades_.size() == 0) {
@@ -43,11 +43,11 @@ int Student::get_min() {
   std::vector<int>::iterator it =
       std::min_element(grades_.begin(), grades_.end());
   return *it;
-};
+}
 
 int Student::id() const { return id_; }
 
-const std::vector<int> &Student::grades() const { return grades_; };
+const std::vector<int> &Student::grades() const { return grades_; }
 
 void Student::set_grades(std::vector<int> new_grades) {
   grades_ = std::move(new_grades);
