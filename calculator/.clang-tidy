@@ -1,0 +1,65 @@
+Checks: >
+  -*,
+  readability-identifier-naming,
+  google-readability-namespace-comments,
+  modernize-use-override,
+  cppcoreguidelines-pro-type-member-init,
+  readability-const-return-type,
+  bugprone-reserved-identifier
+
+CheckOptions:
+  # --- Классы, структуры и перечисления ---
+  - key:             readability-identifier-naming.ClassCase
+    value:           CamelCase
+  - key:             readability-identifier-naming.StructCase
+    value:           CamelCase
+  - key:             readability-identifier-naming.EnumCase
+    value:           CamelCase
+
+  # --- Элементы перечислений ---
+  - key:             readability-identifier-naming.EnumConstantCase
+    value:           snake_case
+
+  # --- Функции и методы ---
+  - key:             readability-identifier-naming.FunctionCase
+    value:           snake_case
+
+  # --- Обычные переменные ---
+  - key:             readability-identifier-naming.VariableCase
+    value:           snake_case
+
+  # --- ПОЛЯ КЛАССОВ И СТРУКТУР (разделяем по видимости) ---
+  # Публичные поля (например, в struct Node) - просто snake_case, БЕЗ суффикса
+  - key:             readability-identifier-naming.PublicMemberCase
+    value:           snake_case
+  
+  # Приватные поля - snake_case с суффиксом '_'
+  - key:             readability-identifier-naming.PrivateMemberCase
+    value:           snake_case
+  - key:             readability-identifier-naming.PrivateMemberSuffix
+    value:           '_'
+  
+  # Защищенные поля (на случай наследования) - аналогично приватным
+  - key:             readability-identifier-naming.ProtectedMemberCase
+    value:           snake_case
+  - key:             readability-identifier-naming.ProtectedMemberSuffix
+    value:           '_'
+
+  # --- Глобальные константы и constexpr ---
+  - key:             readability-identifier-naming.GlobalConstantCase
+    value:           CamelCase
+  - key:             readability-identifier-naming.GlobalConstantPrefix
+    value:           k
+  - key:             readability-identifier-naming.ConstantCase
+    value:           CamelCase
+  - key:             readability-identifier-naming.ConstantPrefix
+    value:           k
+
+  # --- Статические константы в классах ---
+  - key:             readability-identifier-naming.ClassConstantCase
+    value:           CamelCase
+  - key:             readability-identifier-naming.ClassConstantPrefix
+    value:           k
+
+  - key:             readability-identifier-naming.IgnoreFailedSplit
+    value:           '1'

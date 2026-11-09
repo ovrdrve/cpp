@@ -1,0 +1,11 @@
+# .clang-format
+BasedOnStyle: Google
+IndentWidth: 4
+AccessModifierOffset: -4
+ColumnLimit: 100
+PointerAlignment: Left
+NamespaceIndentation: None
+# Автоматически добавляет комментарий к закрывающей скобке пространства имен: } // namespace my_app
+FixNamespaceComments: true
+# Выравнивание инициализации в конструкторах
+PackConstructorInitializers: BinPack
