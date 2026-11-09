@@ -1,0 +1,20 @@
+#1 Корректные данные
+input: "5"
+output:
+Reserved: 5
+Tickets left: 30
+
+Ф-ия reserve_copy не имела доступа к переменной tickets_left, вместо этого в неё
+передавалось только значение, посредством копирования. tickets_left не поменяла своё значение
+
+input: "6"
+output:
+Reserved: 6
+Tickets left: 24
+
+Ф-ия reserve_ref получила доступ к адресу переменной tickets_left, изменения происходили с
+данными этой переменной. tickets_left поменяла свое значение
+
+#2 Некорректные данные
+input: "0"
+output: Incorrect number of seats
