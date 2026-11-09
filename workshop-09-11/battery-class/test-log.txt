@@ -1,0 +1,17 @@
+#1
+1. Создать с 10 заряда
+2. Зарядить на 59
+3. Разрядить на 70
+
+Battery charge: 69
+Battery charge: 0
+Is battery empty? - Yes
+
+#2
+1. Создать с 110 заряда
+2. Зарядть на 20
+3. Разрядить на 40
+
+Battery charge: 100
+Battery charge: 60
+Is battery empty? - No
