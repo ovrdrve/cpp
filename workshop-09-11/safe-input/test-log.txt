@@ -1,0 +1,20 @@
+#1
+1 input: "Имя Фамилия отчество"
+2 input: "Название курса"
+3 input: "12"
+output:
+Name: Имя Фамилия Отчество
+Course name: Название курса
+Number of classes: 12
+
+#2
+1 input: "Имя Фамилия отчество"
+2 input: "" //повтор ввода
+3 input: "Название курса"
+4 input: 45 //повтор ввода
+5 input: "abc" //повтор ввода
+6 input: 10
+output:
+Name: Имя Фамилия Отчество
+Course name: Название курса
+Number of classes: 10
