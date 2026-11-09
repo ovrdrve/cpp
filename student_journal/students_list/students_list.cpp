@@ -1,4 +1,5 @@
 #include "./students_list.hpp"
+#include "../student/student.hpp"
 #include <algorithm>
 
 const std::vector<Student> &StudentsList::get_list() const {
