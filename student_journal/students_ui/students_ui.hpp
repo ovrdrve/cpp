@@ -12,7 +12,7 @@ public:
 private:
   StudentsList &list_;
   int current_page_ = 0;
-  int students_per_page_;
+  int students_per_page_ = 5;
 
   void render_list();
   void render_menu();

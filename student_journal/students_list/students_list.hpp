@@ -5,7 +5,11 @@
 #include <vector>
 
 class StudentsList {
+
 public:
+  StudentsList(std::vector<Student> students)
+      : students_(std::move(students)) {}
+
   const std::vector<Student> &get_list() const;
   void add_student(Student &student);
   void remove_student_by_id(int target_id);

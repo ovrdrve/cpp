@@ -6,11 +6,13 @@
 #include <iomanip>
 #include <ios>
 #include <iostream>
+#include <limits>
 #include <ostream>
 #include <sstream>
 #include <string>
 #include <utility>
 #include <vector>
+
 
 namespace {
 constexpr int w_number = 3;
@@ -57,10 +59,10 @@ void StudentsUI::render_list() {
   print_separator(w_total);
   print_cell(std::left, w_number, "N#");
   print_cell(std::left, w_name, "Student name");
-  print_cell(std::right, w_avr_grade, "Average");
-  print_cell(std::right, w_bad_grades_count, "Retakes");
-  print_cell(std::right, w_min_grade, "Min");
-  print_cell(std::right, w_max_grade, "Max");
+  print_cell(std::left, w_avr_grade, "Average");
+  print_cell(std::left, w_bad_grades_count, "Retakes");
+  print_cell(std::left, w_min_grade, "Min");
+  print_cell(std::left, w_max_grade, "Max");
   print_cell(std::left, w_id, "ID");
   std::cout << "|\n";
   print_separator(w_total);
