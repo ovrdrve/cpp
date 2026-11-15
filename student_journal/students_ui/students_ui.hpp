@@ -5,19 +5,22 @@
 
 class StudentsUI {
 public:
-  StudentsUI(const StudentsList &list) : list_(list) {};
-  
+  StudentsUI(StudentsList &list) : list_(list) {};
+
   void run();
-  void display_list();
-  void display_actions();
-  void handle_action();
-  void on_add();
-  void on_delete();
 
 private:
-  const StudentsList &list_;
-  int current_page_;
+  StudentsList &list_;
+  int current_page_ = 0;
   int students_per_page_;
+
+  void render_list();
+  void render_menu();
+  void handle_action(int action);
+  void on_add();
+  void on_delete();
+  void on_next();
+  void on_previous();
 };
 
 #endif

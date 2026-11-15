@@ -6,21 +6,20 @@
 
 class Student {
 public:
-  std::string name;
-
   Student(std::string name, std::vector<int> grades);
 
-  float get_average_grade();
-  int get_bad_grades_count();
-  int get_max();
-  int get_min();
+  float get_average_grade() const;
+  int get_bad_grades_count() const;
+  int get_max_grade() const;
+  int get_min_grade() const;
 
-  int id() const;
-  const std::vector<int> &grades() const;
-  void set_grades(std::vector<int>);
+  int get_id() const;
+  const std::string &get_name() const;
+  const std::vector<int> &get_grades() const;
 
 private:
   static int next_id;
+  std::string name_;
   int id_;
   std::vector<int> grades_;
 };
