@@ -51,7 +51,7 @@ int main() {
   }
   avg = avg / count;
 
-  printf("Average grade: %.2f", avg);
+  printf("Average grade: %.2f\n", avg);
   printf("Student with highest grade: %s", highest_grade_student->name);
 
   free(students);
