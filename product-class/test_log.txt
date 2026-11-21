@@ -1,0 +1,27 @@
+#1
+name: "Продукт 1"
+price: 1200
+count: 12
+
+Output:
+Success sale
+5 left
+6000 cost
+Error: cannot sell
+Success restock
+Success sale
+1 left
+1200 cost
+
+#2
+name: "Продукт 1"
+price: 1500
+count: 7
+
+Output:
+Success sale
+0 left
+0 cost
+Error: cannot sell
+Success restock
+Error: cannot sell
